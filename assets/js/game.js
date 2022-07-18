@@ -163,8 +163,17 @@ var randomNumber = function () {
         {name: "Amy Android", attack: randomNumber(10,14)},
         {name: "Robo Trumble", attack: randomNumber(10,14)}
     ];
+
+    var getPlayerName = function () {
+        var name = "";
+        while (name === "" || name === null) {
+            name = prompt("what is your robot's name?");
+        }
+        console.log("your robot name is " + name)
+        return name;
+    }
     var playerInfo = {
-        name: window.prompt("What is your robot's name?"),
+        name: getPlayerName(),
         health: 100,
         attack: 10,
         money: 10,
